@@ -130,7 +130,9 @@ double multiply(double a, double b)
 bool divide(double a, double b, double *result)
 {
     if (b == 0)
+    {
         return false;
+    }
 
     *result = a / b;
     return true;
@@ -142,10 +144,14 @@ double power(double base, int exponent)
     int abs_exp = exponent < 0 ? -exponent : exponent;
 
     for (int i = 0; i < abs_exp; i++)
+    {
         result *= base;
+    }
 
     if (exponent < 0)
+    {
         return 1.0 / result;
+    }
 
     return result;
 }
@@ -153,12 +159,16 @@ double power(double base, int exponent)
 bool factorial(int n, long long *result)
 {
     if (n < 0)
+    {
         return false;
+    }
 
     *result = 1;
 
     for (int i = 1; i <= n; i++)
+    {
         *result *= i;
+    }
 
     return true;
 }
