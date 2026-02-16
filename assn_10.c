@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// Function prototypes
 double add(double a, double b);
 double subtract(double a, double b);
 double multiply(double a, double b);
